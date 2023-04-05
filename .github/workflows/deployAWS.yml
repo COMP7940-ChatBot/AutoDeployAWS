@@ -4,7 +4,7 @@ on:
     branches:
     - main
 env:
-    DEP_PATH: chatbot.py
+    DEP_PATH: index.html
 
 jobs:
   build:
@@ -15,8 +15,11 @@ jobs:
         fetch-depth: 0
     - name: Deploy
       env:
-        HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
-        HEROKU_APP_NAME: "comp7940chatbot2023mh" 
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+        #HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
+        #HEROKU_APP_NAME: "comp7940chatbot2023mh" 
       #run: git push -f https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git main
       
     - name: Security vulnerabilities scan

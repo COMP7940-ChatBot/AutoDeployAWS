@@ -14,6 +14,7 @@ WORKDIR /app
 COPY . /app
 COPY chatbot_lab4.py .
 COPY requirements.txt .
+ENV PIP_ROOT_USER_ACTION=ignore
 ENV ACCESS_TOKEN="5864267617:AAGLbgGXl9Dj32aZELBgCoLvB52O69XaLqU"
 ENV HOST="redis-15681.c114.us-east-1-4.ec2.cloud.redislabs.com"
 ENV PASSWORD="Kh01FOjYRhgN1HR5E0q6mbQ2Dg4NO0T6"

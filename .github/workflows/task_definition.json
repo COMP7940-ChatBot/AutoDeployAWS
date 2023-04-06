@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-east-1:678966922805:task-definition/demo_deploy:9",
+    "taskDefinitionArn": "arn:aws:ecs:ap-east-1:678966922805:task-definition/demo_deploy:11",
     "containerDefinitions": [
         {
             "name": "demo_deploy",
-            "image": "678966922805.dkr.ecr.ap-east-1.amazonaws.com/demo_deploy:67c5fb6988dedd6ff906318fc6dd9740a574a200",
+            "image": "678966922805.dkr.ecr.ap-east-1.amazonaws.com/demo_deploy",
             "cpu": 0,
             "portMappings": [
                 {
@@ -21,8 +21,8 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/demo_deploy",
                     "awslogs-create-group": "true",
+                    "awslogs-group": "/ecs/demo_deploy",
                     "awslogs-region": "ap-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -30,9 +30,10 @@
         }
     ],
     "family": "demo_deploy",
+    "taskRoleArn": "arn:aws:iam::678966922805:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::678966922805:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 9,
+    "revision": 11,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -47,6 +48,9 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
@@ -75,7 +79,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-04-06T01:06:10.281Z",
+    "registeredAt": "2023-04-06T01:42:38.457Z",
     "registeredBy": "arn:aws:iam::678966922805:root",
     "tags": []
 }

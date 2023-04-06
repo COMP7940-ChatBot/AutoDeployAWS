@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-east-1:678966922805:task-definition/demo_deploy:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-east-1:678966922805:task-definition/demo_deploy:9",
     "containerDefinitions": [
         {
             "name": "demo_deploy",
-            "image": "678966922805.dkr.ecr.ap-east-1.amazonaws.com/demo_deploy",
+            "image": "678966922805.dkr.ecr.ap-east-1.amazonaws.com/demo_deploy:67c5fb6988dedd6ff906318fc6dd9740a574a200",
             "cpu": 0,
             "portMappings": [
                 {
@@ -16,14 +16,13 @@
             ],
             "essential": true,
             "environment": [],
-            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-create-group": "true",
                     "awslogs-group": "/ecs/demo_deploy",
+                    "awslogs-create-group": "true",
                     "awslogs-region": "ap-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
@@ -33,7 +32,7 @@
     "family": "demo_deploy",
     "executionRoleArn": "arn:aws:iam::678966922805:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 9,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -76,7 +75,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-04-05T11:01:01.585Z",
+    "registeredAt": "2023-04-06T01:06:10.281Z",
     "registeredBy": "arn:aws:iam::678966922805:root",
     "tags": []
 }

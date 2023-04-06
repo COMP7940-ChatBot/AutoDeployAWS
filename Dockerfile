@@ -23,6 +23,7 @@ RUN pip install --user pip update --user
 RUN python -m pip install --user --upgrade pip
 RUN python -m pip install --user --upgrade setuptools
 RUN pip install --user -r requirements.txt
+EXPOSE 5000
 #CMD python chatbot_lab4.py
-CMD ["./app/chatbot_lab4.py"]
+CMD ["./app/chatbot_lab4.py","-D","FOREGROUND"]
 ENTRYPOINT ["python"]

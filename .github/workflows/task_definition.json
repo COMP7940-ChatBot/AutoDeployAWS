@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-east-1:678966922805:task-definition/demo_deploy:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-east-1:678966922805:task-definition/demo_deploy:14",
     "containerDefinitions": [
         {
             "name": "demo_deploy",
@@ -24,7 +24,7 @@
     "family": "demo_deploy",
     "taskRoleArn": "arn:aws:iam::678966922805:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::678966922805:role/ecsTaskExecutionRole",
-    "revision": 13,
+    "revision": 14,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
